@@ -1,0 +1,12 @@
+DIAGRAMMA USERS
+
+DATI
+
+ID
+nome
+cognome
+eta
+sesso
+profile_src
+descrizone
+interessi
