@@ -21,10 +21,8 @@ class User {
 class Employee extends User{
     public $seguaci;
 
-    // public function __construct($seguaci = 100){
-    //     $this->seguaci = $seguaci;
-    // }
-    public function __construct($_seguaci = 100){
+    public function __construct($_ID,$_nome,$_cognome,$_eta,$_sesso,$_descrizione,$_seguaci = 100){
+        parent::__construct($_ID,$_nome,$_cognome,$_eta,$_sesso,$_descrizione);
         $this->seguaci = $_seguaci;
     }
     public function setSeguaci() {
@@ -35,7 +33,20 @@ class Employee extends User{
     }
 }
 
-$user1 = new User(
+// trait GetInteresse {
+//     public $interesse;
+//     public function setInteresse($interesse){
+//         $this->interesse = $interesse;
+//     }
+//     public function getInteresse(){
+//         return $this->interesse;
+//     }
+
+//     $user1->setInteresse('politica');
+//     $interesse1 = $user1->getInteresse();
+// }
+
+$user1 = new Employee(
     1234,
     'Jerry',
     'Polemica',
@@ -43,7 +54,7 @@ $user1 = new User(
     'Maschio',
     'Sollevatore di polemiche'
 );
-$user2 = new User(
+$user2 = new Employee(
     4321,
     'Padre',
     'Maronno',
